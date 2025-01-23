@@ -19,7 +19,6 @@ import gr.sr.premiumEngine.PremiumHandler;
 /**
  * Handles Promo Codes for players.
  * @author VMILON
- * @Website l2soe.com
  */
 public class L2PromoInstance extends L2Npc
 {
