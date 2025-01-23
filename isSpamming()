@@ -1,0 +1,40 @@
+// VMILON CHAT BLOCK
+	private boolean isSpamming(L2PcInstance player)
+	{
+		int playerId = player.getObjectId();
+		
+		// Get the player's list of message timestamps, or create a new one if not present
+		messageTimestamps.putIfAbsent(playerId, new LinkedList<>());
+		LinkedList<Long> timestamps = messageTimestamps.get(playerId);
+		
+		long currentTime = System.currentTimeMillis();
+		
+		// Remove timestamps that are older than the time window
+		timestamps.removeIf(timestamp -> (currentTime - timestamp) > TIME_WINDOW);
+		
+		// Add the current timestamp
+		timestamps.add(currentTime);
+		
+		// Check if the player has reached the warning threshold
+		if ((timestamps.size() >= WARNING_THRESHOLD) && (timestamps.size() < MESSAGE_LIMIT))
+		{
+			// Check if the player has already been warned
+			if (!warningIssued.containsKey(playerId) || !warningIssued.get(playerId))
+			{
+				// Issue a warning
+				player.sendMessage("Warning: You are sending messages too quickly. Please slow down, or you will be muted.");
+				
+				// Mark that the warning has been issued
+				warningIssued.put(playerId, true);
+			}
+		}
+		
+		// Reset warning if the player stops spamming
+		if (timestamps.size() < WARNING_THRESHOLD)
+		{
+			warningIssued.put(playerId, false);
+		}
+		
+		// Check if the player exceeded the message limit
+		return timestamps.size() > MESSAGE_LIMIT;
+	}
