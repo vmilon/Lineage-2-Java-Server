@@ -2,7 +2,7 @@ This is a project I worked on during my employment at Biznest. This Java code wa
 
 It is a Java emulator which I edited and added features to.
 
-Due to the nature and size of the project, I cannot share every class and method that i used to create my features.
+Due to the nature and size of the project, I cannot share every class and method that i used to create my features nor every feature i added. I will try and include the most noteworthy efforts.
 
 FEATURES I ADDED:
 
@@ -11,6 +11,7 @@ FEATURES I ADDED:
 
 -L2LoyaltyInstance.java
 An Instance of NPC that acts as a "loyalty" shop, the player receives loyalty points every 10 minutes he is online and he can spend them on this shop.
+
 
 -L2PromoInstance.java
 An Instance of NPC that receives input from the player, if there is an active promo code in our database the user receives gifts.
@@ -22,3 +23,12 @@ An Instance of NPC that allows the user to use many services in exchange for don
 
 -isSpamming()
 A function that simply issued a temporary chat block to a player that spammed on global chats.
+
+
+-PremiumHandler.java
+Logic for premium account. This system was already in place by another developer. I split the premium in 2 parts (Gold and Platinum) and added the option to extend the remaining time of the players premium account.
+Previously you had to wait for the premium account to expire.
+
+
+
+Disclaimer: I am in no way an expert in Java. This was a project that i was assigned to by my employer. I am simply showcasing some of my work. Thanks for taking the time to read this
