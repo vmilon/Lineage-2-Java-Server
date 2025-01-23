@@ -30,5 +30,9 @@ Logic for premium account. This system was already in place by another developer
 Previously you had to wait for the premium account to expire.
 
 
+-AioSigns.java
+A merging of 3 NPCS (blacksmith of mammon, merchant of mammon, black marketeer of mammon). This was created as a 'Quality of Life' feature. Most of the features of the NPC are simply copied from the original NPCs, I simply merged and adapted them.
+
+
 
 Disclaimer: I am in no way an expert in Java. This was a project that i was assigned to by my employer. I am simply showcasing some of my work. Thanks for taking the time to read this
