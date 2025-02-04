@@ -1,6 +1,6 @@
-<strong>This is a project I worked on during my employment at Biznest. This Java code was written in Eclipse IDE.</strong>
+<strong>This Java code was written in Eclipse IDE.</strong>
 
-It is a Java emulator which I edited and added features to.
+It is a Java emulator for Lineage 2 which I edited and added features to.
 
 Due to the nature and size of the project, I cannot share every class and method that i used to create my features nor every feature i added. I will try and include the most noteworthy efforts.
 
